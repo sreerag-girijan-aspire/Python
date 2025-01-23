@@ -18,3 +18,11 @@ try:
         content = file.read()
 except (FileNotFoundError, PermissionError) as e:
     print(f"An error occurred: {e}")
+
+
+
+try:
+    with open('some_file.txt', 'r') as file:
+        content = file.read()
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
