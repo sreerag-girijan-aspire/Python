@@ -33,3 +33,14 @@ print(are_files_equal)
 # Compare two directories
 dir_comparison = filecmp.dircmp('dir1', 'dir2')
 dir_comparison.report()
+
+
+
+
+import tempfile
+
+# Create a temporary file
+with tempfile.TemporaryFile() as temp_file:
+    temp_file.write(b'Hello, World!')
+    temp_file.seek(0)
+    print(temp_file.read())
