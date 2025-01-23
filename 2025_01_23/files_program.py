@@ -26,3 +26,13 @@ try:
         content = file.read()
 except Exception as e:
     print(f"An unexpected error occurred: {e}")
+
+
+
+try:
+    with open('some_file.txt', 'r') as file:
+        content = file.read()
+except FileNotFoundError:
+    print("The file was not found.")
+finally:
+    print("This block is executed no matter what.")
