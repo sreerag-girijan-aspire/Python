@@ -63,3 +63,11 @@ import os
 for file in os.listdir('.'):
     if fnmatch.fnmatch(file, '*.txt'):
         print(file)
+
+
+
+import linecache
+
+# Get a specific line from a file
+line = linecache.getline('example.txt', 3)
+print(line)
