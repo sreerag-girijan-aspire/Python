@@ -53,3 +53,13 @@ import glob
 # Find all .txt files in the current directory
 txt_files = glob.glob('*.txt')
 print(txt_files)
+
+
+
+import fnmatch
+import os
+
+# List all .txt files in the current directory
+for file in os.listdir('.'):
+    if fnmatch.fnmatch(file, '*.txt'):
+        print(file)
