@@ -1,7 +1,7 @@
 from pathlib import Path
 
 # Create a Path object
-path = Path('/home/user/documents')
+path = Path.cwd()
 
 # Check if the path exists
 print(path.exists())
@@ -11,7 +11,7 @@ for file in path.iterdir():
     print(file)
 
 
-
+print()
 import os
 
 # Get the absolute path
@@ -25,14 +25,13 @@ print(is_file)
 
 
 import filecmp
-
 # Compare two files
 are_files_equal = filecmp.cmp('file1.txt', 'file2.txt')
 print(are_files_equal)
 
-# Compare two directories
-dir_comparison = filecmp.dircmp('dir1', 'dir2')
-dir_comparison.report()
+# # Compare two directories
+# dir_comparison = filecmp.dircmp('dir1', 'dir2')
+# dir_comparison.report()
 
 
 
@@ -69,9 +68,8 @@ for file in os.listdir('.'):
 import linecache
 
 # Get a specific line from a file
-line = linecache.getline('example.txt', 3)
+line = linecache.getline('file1.txt', 3)
 print(line)
-
 
 
 import shutil
@@ -80,4 +78,4 @@ import shutil
 shutil.copy('source.txt', 'destination.txt')
 
 # Archive a directory
-shutil.make_archive('archive_name', 'zip', 'directory_to_archive')
+shutil.make_archive('archive_name', 'zip')
