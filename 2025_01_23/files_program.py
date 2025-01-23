@@ -10,3 +10,11 @@ try:
         file.write("Trying to write to a protected file.")
 except PermissionError:
     print("You do not have permission to write to this file.")
+
+
+
+try:
+    with open('some_file.txt', 'r') as file:
+        content = file.read()
+except (FileNotFoundError, PermissionError) as e:
+    print(f"An error occurred: {e}")
