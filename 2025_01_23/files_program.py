@@ -36,3 +36,13 @@ except FileNotFoundError:
     print("The file was not found.")
 finally:
     print("This block is executed no matter what.")
+
+
+
+class CustomError(Exception):
+    pass
+
+try:
+    raise CustomError("This is a custom error.")
+except CustomError as e:
+    print(f"A custom error occurred: {e}")
