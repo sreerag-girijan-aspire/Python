@@ -71,3 +71,13 @@ import linecache
 # Get a specific line from a file
 line = linecache.getline('example.txt', 3)
 print(line)
+
+
+
+import shutil
+
+# Copy a file
+shutil.copy('source.txt', 'destination.txt')
+
+# Archive a directory
+shutil.make_archive('archive_name', 'zip', 'directory_to_archive')
