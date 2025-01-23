@@ -21,3 +21,15 @@ print(abs_path)
 # Check if a path is a file
 is_file = os.path.isfile('example.txt')
 print(is_file)
+
+
+
+import filecmp
+
+# Compare two files
+are_files_equal = filecmp.cmp('file1.txt', 'file2.txt')
+print(are_files_equal)
+
+# Compare two directories
+dir_comparison = filecmp.dircmp('dir1', 'dir2')
+dir_comparison.report()
