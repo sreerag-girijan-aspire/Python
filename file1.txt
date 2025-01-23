@@ -1,0 +1,5 @@
+with open('/c:/Users/sreerag.girijan/Documents/Python/file1.txt', 'a') as file:
+    file.write('simple\n')
+    file.write('text\n')
+    file.write('content\n')
+    file.write('with 4 lines\n')

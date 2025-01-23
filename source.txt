@@ -1,0 +1,4 @@
+file.write('simple\n')
+file.write('text\n')
+file.write('content\n')
+file.write('with 4 lines\n')
