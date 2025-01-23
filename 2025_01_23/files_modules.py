@@ -44,3 +44,12 @@ with tempfile.TemporaryFile() as temp_file:
     temp_file.write(b'Hello, World!')
     temp_file.seek(0)
     print(temp_file.read())
+
+
+
+
+import glob
+
+# Find all .txt files in the current directory
+txt_files = glob.glob('*.txt')
+print(txt_files)
