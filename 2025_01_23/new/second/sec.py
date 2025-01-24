@@ -1,2 +1,2 @@
-def print_msg():
-    print("Hello") 
+from ..util import print_msg
+print_msg()

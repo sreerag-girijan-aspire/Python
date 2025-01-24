@@ -1,2 +1,2 @@
-from .second import sec
-print(sec.print_msg())
+def print_msg():
+    print("Hello") 
