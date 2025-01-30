@@ -12,8 +12,8 @@ connection = mysql.connector.connect(
 cursor = connection.cursor()
 
 # Example query
-cursor.execute("SELECT DATABASE();")
-result = cursor.fetchone()
+cursor.execute("SHOW DATABASES;")
+result = cursor.fetchall()
 print("Connected to database:", result)
 
 # Don't forget to close the cursor and connection when done
