@@ -18,6 +18,7 @@ class Dog:
         else:
             print("Invalid age!")
 
+
 # Example Usage
 dog = Dog("Buddy", "Labrador", 3)
 
