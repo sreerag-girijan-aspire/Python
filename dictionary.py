@@ -5,7 +5,7 @@ print(tel)
 knights = {'gallahad': 'the pure', 'robin': 'the brave'}
 for k, v in knights.items():
     print(k, v)
-
+print(knights.get("gallahad"))
 
 for i, v in enumerate(['tic', 'tac', 'toe']): #the position index and corresponding value 
     print(i, v)
