@@ -3,7 +3,13 @@ from django.http import HttpResponse
 from .models import Question
 from django.template import loader
 from django.http import Http404
-
+from django.urls import reverse_lazy
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from app0.models import Author
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import CreateView
+from app0.forms import ContactForm
+from django.views.generic.edit import FormView
 
 
 def index(request):
@@ -37,8 +43,7 @@ def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
 
 
-from app0.forms import ContactForm
-from django.views.generic.edit import FormView
+
 
 
 class ContactFormView(FormView):
@@ -53,14 +58,16 @@ class ContactFormView(FormView):
         return super().form_valid(form)
     
 
-from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView, DeleteView, UpdateView
-from app0.models import Author
 
 
-class AuthorCreateView(CreateView):
+
+class AuthorCreateView(LoginRequiredMixin,CreateView):
     model = Author
     fields = ["name"]
+    
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        return super().form_valid(form)
 
 
 class AuthorUpdateView(UpdateView):
