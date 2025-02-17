@@ -24,3 +24,6 @@ for value in raw_data:
         filtered_data.append(value)
 
 filtered_data
+
+squares = {x: x**2 for x in range(10)}
+print(squares)
