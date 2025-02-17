@@ -18,3 +18,14 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
     def __str__(self):
         return self.choice_text  
+    
+
+from django.db import models
+from django.urls import reverse
+
+
+class Author(models.Model):
+    name = models.CharField(max_length=200)
+
+    def get_absolute_url(self):
+        return reverse("author-detail", kwargs={"pk": self.pk})
