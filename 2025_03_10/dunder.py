@@ -58,3 +58,9 @@ obj = MyClass([1, 2, 3])
 obj[1] = 5
 print(obj.items)  # Output: [1, 5, 3]
 
+class MyClass:
+    def __del__(self):
+        print("Object is being deleted")
+
+obj = MyClass()
+del obj  # Output: Object is being deleted
