@@ -92,3 +92,15 @@ for item in obj:
 # 1
 # 2
 # 3
+
+
+
+class MyClass:
+    def __init__(self, items):
+        self.items = items
+    
+    def __contains__(self, item):
+        return item in self.items
+
+obj = MyClass([1, 2, 3])
+print(2 in obj)  # Output: True
