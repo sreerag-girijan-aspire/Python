@@ -75,3 +75,20 @@ class MyClass:
 
 obj = MyClass(10)
 print(obj())  # Output: Called with value 10
+
+
+
+class MyClass:
+    def __init__(self, items):
+        self.items = items
+    
+    def __iter__(self):
+        return iter(self.items)
+
+obj = MyClass([1, 2, 3])
+for item in obj:
+    print(item)
+# Output:
+# 1
+# 2
+# 3
