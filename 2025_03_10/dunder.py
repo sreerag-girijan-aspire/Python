@@ -35,3 +35,13 @@ class MyClass:
 
 obj = MyClass([1, 2, 3])
 print(len(obj))  # Output: 3
+
+class MyClass:
+    def __init__(self, items):
+        self.items = items
+    
+    def __getitem__(self, index):
+        return self.items[index]
+
+obj = MyClass([1, 2, 3])
+print(obj[1])  # Output: 2
