@@ -64,3 +64,14 @@ class MyClass:
 
 obj = MyClass()
 del obj  # Output: Object is being deleted
+
+
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+    
+    def __call__(self):
+        return f"Called with value {self.value}"
+
+obj = MyClass(10)
+print(obj())  # Output: Called with value 10
