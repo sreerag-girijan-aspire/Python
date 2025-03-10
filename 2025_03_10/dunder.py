@@ -45,3 +45,16 @@ class MyClass:
 
 obj = MyClass([1, 2, 3])
 print(obj[1])  # Output: 2
+
+
+class MyClass:
+    def __init__(self, items):
+        self.items = items
+    
+    def __setitem__(self, index, value):
+        self.items[index] = value
+
+obj = MyClass([1, 2, 3])
+obj[1] = 5
+print(obj.items)  # Output: [1, 5, 3]
+
