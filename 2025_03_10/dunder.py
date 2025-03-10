@@ -24,3 +24,14 @@ obj1 = MyClass(10)
 obj2 = MyClass(20)
 result = obj1 + obj2
 print(result.value)  # Output: 30
+
+
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+    
+    def __len__(self):
+        return len(self.value)
+
+obj = MyClass([1, 2, 3])
+print(len(obj))  # Output: 3
